@@ -811,3 +811,5 @@ console.log(finalSettings)
 
 console.log("_".repeat(50))
 "------------------------------------------------------------------------------"
+
+console.log("End of Training")
