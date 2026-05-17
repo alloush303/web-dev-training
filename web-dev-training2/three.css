@@ -1,0 +1,47 @@
+* {
+    background-color: #555;
+}
+
+.card {
+    width: 25%;
+    height: 90vh;
+    margin: 2%;
+    background-color: blue;
+    color: #fff;
+    border: 10px solid rgb(0, 0, 0);
+}
+
+h1 {
+    font-size: 50px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-left: 10%;
+    background-color: blue;
+}
+
+p {
+    font-size: 30px;
+    font-family:  zapfino, cursive;
+    margin-left: 10%;
+    padding-right: 20%;
+    background-color: blue;
+}
+
+button.okay {
+    width: 25%;
+    height: 10%;
+    margin: 10px 0 0 10%;
+    border: none;
+    background-color: #fff;
+    color: #555;
+    font-size: 20px;
+}
+
+button.cancel {
+    width: 30%;
+    height: 10%;
+    margin: 10px 0 0 5%;
+    border: none;
+    background-color: #000;
+    color: #fff;
+    font-size: 20px;
+}

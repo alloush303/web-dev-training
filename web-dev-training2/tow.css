@@ -1,5 +1,6 @@
-p {
-    color : rgb(185, 121, 1)
+.title {
+    color : rgb(185, 121, 1);
+    font-size: 20px;
 }
 
 h1 {
