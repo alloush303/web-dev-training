@@ -1,0 +1,46 @@
+* {
+    background-color: rgb(152, 189, 212);
+}
+
+.card {
+    max-width: 350px;
+    min-height: 500px;
+    height: 80vh;
+    margin: 5%;
+    border-radius: 5%;
+    box-shadow: 5px 5px 10px rgba(68, 68, 68, 0.5);
+    background: linear-gradient(rgb(0, 204, 255), white);
+}
+
+img {
+    width: 100%;
+    height: auto;
+    border-radius: 5% 5% 0 0;
+}
+
+h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 35px;
+    margin: 30px 0 0 20px;
+    color: rgb(4, 49, 88);
+    background: none;
+}
+
+p {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-left: 20px;
+    color: rgb(42, 44, 44);
+    background: none;
+
+}
+
+button {
+    padding: 15px 28px;
+    margin: 10px 0 0 30px;
+    border: none;
+    border-radius: 25px;
+    color: aliceblue;
+    background-color: #4169e1;
+    font-size: 20px;
+    font-weight: bold;
+}
