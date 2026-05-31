@@ -1,0 +1,270 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css");
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --main-color: #5456c4;
+    --secondary-color: #f1f1f1;
+    --main-font:  "Outfit", sans-serif;
+}
+
+.head{
+    position: absolute;
+    height: 4rem;
+    top: 5%;
+    left: 50%;
+
+    background: none;
+    z-index: 10;
+}
+
+.head span {
+    font-size: 50px;
+    cursor: pointer;
+
+}
+
+#contact {
+    width: 100%;
+    height: 120vh;
+    background: url('pensive-male-customer-looking-away.jpg') no-repeat left  ;
+    background-size: auto 150% ;
+}
+
+#contact .home {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 8rem;
+    padding-top: 2rem;
+}
+
+.home h1 {
+    font-family: var(--main-font);
+    font-size: 100px;
+    width: 50%;
+    font-weight: bold;
+    line-height: 1;
+}
+
+.home p {
+    width: 70%;
+    padding-top: 2rem;
+    font-family: var(--main-font);
+    font-size: 18px;
+    font-weight: 100;
+    line-height: 2;
+}
+
+.home .contact-btn{
+    width: 30%;
+    margin-top: 3rem;
+    padding: 1.5rem;
+    background-color: var(--main-color);
+    border: none;
+    font-family: var(--main-font);
+    font-size: 16px;
+    color: #fff;
+    transition: all 0.5s ease ;
+}
+
+.home .contact-btn:hover{
+    background-color: #aeaffc;
+    color: #000;
+}
+
+
+#support {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#support .support-container {
+    width: 600px;
+    height: 50%;
+}
+
+.support-container  h2 {
+    font-family: var(--main-font);
+    font-size: 40px;
+}
+
+.support-container .time-work{
+    width: 70%;
+    height: 70%;
+    margin: 3rem 0;
+    padding: 4rem 0 2rem 2rem;
+    background-color: var(--secondary-color);
+}
+
+.support-container .time-work h3{
+    font-family: var(--main-font);
+    font-size: 22px;
+    margin-bottom: 2rem;
+    
+}
+
+
+
+
+.support-container .time-work span {
+    display: block;
+    font-family: var(--main-font);
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+#support .form-container{
+    width: 500px;
+    height: 80vh;
+    padding: 2rem;
+    background-color: var(--secondary-color);
+}
+
+#support .form-container .form-name input,
+#support .form-container .form-email input,
+#support .form-container .form-message textarea{
+    width: 90%;
+    margin: 0.4rem 0 2rem 0;
+    padding: 1rem;
+    border: none;
+    font-size: 16px;
+    font-family: var(--main-font);
+
+}
+
+#support .form-container .form-name label,
+#support .form-container .form-email label,
+#support .form-container .form-message label
+{
+    font-family: var(--main-font);
+}
+form label,input,textarea{
+    display: block;
+}
+
+
+#support .form-container .submit-btn{
+    width: 30%;
+    padding: 1rem;
+    background-color: var(--main-color);
+    border: none;
+    font-family: var(--main-font);
+    font-size: 16px;
+    color: #fff;
+    transition: color 0.5s ease ;
+}
+
+#support .form-container .submit-btn:hover{
+    background-color: #3d3fc4;
+}
+
+#site {
+    width: 100%;
+    height: 55vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 4rem;
+    background-color: var(--secondary-color);
+}
+
+#site .box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    height: 225px;
+    padding: 1rem;
+    background-color: var(--main-color);
+}
+
+#site .box-2{
+    background-color: #fff;
+}
+
+#site .box img {
+    object-fit: cover;
+}
+
+
+#info {
+    width: 100%;
+    height: 400px;
+    background-color: var(--main-color);
+    color: #fff;
+}
+
+#info .info-container{
+    height: 100%;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+}
+
+#info .info-container .box-info{
+    width: 70%;
+    height: 80%;
+    margin-top: 4rem;
+}
+
+#info .info-container .box-info h1 {
+    font-family: var(--main-font);
+    font-size: 35px;
+    margin-bottom: 4rem;
+}
+
+
+#info .info-container .box-info p,span{
+    display: block;
+    font-family: var(--main-font);
+    line-height: 1.5;
+}
+#info .info-container .box-info span{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#info .info-container .box-info h3{
+    font-family: var(--main-font);
+    font-size: 25px;
+    margin-bottom: 1.5rem;
+}
+
+#info .info-container .box-info span{
+    margin: 1rem 0;
+}
+
+#info .info-container .box-info .icon-info{
+    display: flex;
+}
+
+#info .info-container .box-social{
+    width: 70%;
+    height: 80%;
+    margin-top: 4rem;
+}
+
+#info .info-container .box-social h3{
+        font-family: var(--main-font);
+    font-size: 25px;
+    margin-bottom: 1.5rem;
+}
+
+#info .info-container .box-social i {
+    font-size: 25px;
+    margin-right: 10px;
+    cursor: pointer;
+}
