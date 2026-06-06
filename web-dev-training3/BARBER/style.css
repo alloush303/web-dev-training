@@ -1,0 +1,285 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css");
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --main-font: "Noto Sans", sans-serif;
+    --secondary-color: rgb(184, 162, 105);
+    --third-color: rgb(26, 26, 25);
+    --fourth-color:rgb(51, 51, 51);
+    --color-font: #fff
+}
+
+header{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 8rem;
+    background-color: #000;
+}
+
+header .nav-container {
+    width: 70%;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    font-family: var(--main-font);
+    font-size: 14px;
+    font-weight: 200;
+}
+
+header .logo{
+    width: 12%;
+    height: 12%;
+}
+
+header .nav a {
+    text-decoration: none;
+    color: #fff;
+    padding: 0 30px;
+}
+
+header .nav a:hover{
+    color: var(--secondary-color);
+    text-decoration:underline ;
+    text-underline-offset: 6px;
+    text-decoration-thickness: 2px;
+}
+header .nav-container .nav-btn{
+    margin-left: 2rem;
+}
+
+.btn {
+    padding: 15px  30px;
+    font-family: sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: var(--secondary-color);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+header .nav-container .btn:hover{
+    background-color: #b8a2698a;
+}
+
+#aboutUs {
+    width: 100%;
+    min-height: 120vh;
+    height: 100vh;
+    display: flex;
+    justify-content:center;
+    align-items:start;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('medium-shot-man-getting-haircut2-min.jpg') no-repeat ;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#aboutUs .content{
+    width: 50%;
+    margin: 10rem;
+    text-align: center;
+    color: var(--color-font);
+    font-family: var(--main-font);
+}
+
+.content h1 {
+    font-size: 100px;
+}
+
+.content p {
+    margin-top: 3rem;
+    padding: 0 5rem;
+    font-family: var(--main-font);
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+.content .btn-about {
+    margin-top: 3rem;
+    padding: 15px  30px;
+    font-family: var(--main-font);
+    font-size: 18px;
+    font-weight: 500;
+    background-color: var(--secondary-color);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.content .btn-about:hover {
+    background-color: #fff;
+    color: var(--secondary-color);
+}
+
+#workingHours{
+    width: 100%;
+    min-height: 120vh;
+    height: 12  0vh;
+    background-color: var(--third-color);
+}
+
+#workingHours .content-working{
+    width: 100%;
+    padding-top: 2rem;
+    /* margin-top: 2rem; */
+    text-align: center;
+    font-family: var(--main-font);
+    color: #fff;
+
+}
+
+#workingHours .content-working h1{
+    font-size: 50px;
+    font-weight: 900;
+}
+
+#workingHours .content-working .working-info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: start;
+    margin-top: 3rem;
+}
+
+#workingHours .content-working .working-info img{
+    width: 515px;
+    height: 515px;
+    object-fit: cover;
+}
+
+.content-working .working-info .working-hours{
+    width: 50%;
+    padding-left: 2rem;
+}
+
+.content-working .working-info .working-hours .number{
+    font-size: 20px;
+    font-family: var(--main-font);
+    font-weight: bold;
+    color: var(--secondary-color);
+    
+}
+
+.content-working .working-info .working-hours h2{
+    margin: 2rem 0;
+    font-size: 40px;
+    font-weight: 300;
+}
+
+.content-working .working-info .working-hours .line1{
+    display: block;
+    margin-bottom: 3rem;
+    width: 80px;
+    height: 2px;
+    background-color: var(--secondary-color);
+}
+
+.content-working .working-info .working-hours .day-time{
+    margin-bottom: 3rem;
+}
+
+.content-working .working-info .working-hours .day{
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 2;
+}
+
+.content-working .working-info .working-hours .time{
+    margin-left: 3rem;
+    font-size: 20px;
+}
+
+.content-working .working-info .working-hours p {
+    width: 90%;  
+    font-size: 18px;
+    font-weight: bold;
+    font-family:"Josefin Slab", serif ;
+    line-height: 1.5;
+}
+
+.content-working .working-info .working-hours .line2{
+    display: block;
+    margin-top: 3rem;
+    width: 90%;
+    height: 3px;
+    background-color: var(--secondary-color);
+}
+
+#our-story{
+    width: 100%;
+    min-height: 120vh;
+    height: 80vh;
+    background-color: var(--third-color);
+}
+
+#our-story h1{
+    padding: 3rem;
+    text-align: center;
+    font-family: var(--main-font);
+    font-size: 50px;
+    color: #fff;
+}
+
+#our-story .slider-container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 12rem;
+}
+
+#our-story .slider-container .slide{
+    padding: 0 2rem;
+}
+
+#our-story .slider-container .slide h2{
+    margin-bottom: 2rem;
+    padding: 0 1rem;
+    font-size: 60px;
+    font-family: var(--main-font);
+    font-weight: 300;
+    color: #fff;
+}
+
+#our-story .slider-container .slide p{
+    color: #f7f6f650;
+    font-family: var(--main-font);
+    font-size: 18px;
+    font-weight: 200;
+    line-height: 1.5;
+}
+
+#our-story .slider-container .back{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 50;
+    left: 0;
+    opacity: 0.6;
+    padding: 3px;
+    background-color: var(--secondary-color);
+    border-radius: 50%;
+    font-size: 40px;
+    cursor: pointer;
+}
+#our-story .slider-container .next{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 50;
+    right: 0;
+    opacity: 0.6;
+    padding: 3px;
+    background-color: var(--secondary-color);
+    border-radius: 50%;
+    font-size: 40px;
+    cursor: pointer;
+}

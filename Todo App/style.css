@@ -1,0 +1,129 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --main-color: rgba(164, 211, 243, 0.575);
+    --secondary-color:#005e05;
+    font-family: "Handlee", cursive;
+}
+
+.container {
+    width: 100%;
+    min-height: 120vh;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .todo-box{
+    padding: 3rem;
+    width: 50%;
+    min-height:110vh ;
+    height: 100vh;
+
+    border-radius: 25px;
+    background-color: rgba(80, 9, 155, 0.623);
+}
+
+.container .todo-box h1 {
+    text-align: center;
+    font-size: 70px;
+    font-family: "Handlee", cursive;
+    font-weight: 900;
+    color: var(--main-color);
+}
+
+.container .todo-box .todo-add{
+    margin: 2rem 0 1rem 0;
+}
+
+.container .todo-box .todo-add label{
+    font-size: 30px;
+}
+.container .todo-box .todo-add .user-input {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container .todo-box .todo-add .input-todo{
+    width: 60%;
+    height: 30px;
+    padding: 2px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+.container .todo-box .todo-add .input-todo::placeholder{
+    color: rgba(46, 53, 58, 0.37);
+}   
+
+.container .todo-box .todo-add .input-todo:focus{
+    box-shadow: 3px 3px 10px var(--main-color);
+    outline: none;
+}
+
+.container .todo-box .todo-add .todoAdd-btn{
+width: 25%;
+height: 30px;
+font-size: 20px;
+font-family: "Handlee", cursive;
+color: var(--secondary-color);
+border: 2px solid var(--secondary-color);
+border-radius: 5px;
+transition: all 0.3s ease;
+}
+
+.container .todo-box .todo-add .todoAdd-btn:hover{
+    background-color: var(--secondary-color);
+    color: #fff;
+}
+.container .todo-box .todo-show{
+    width: 100%;
+    height: 65vh;
+    border-radius: 25px;
+    background-color: var(--main-color);
+}
+
+.container .todo-box .todo-show h3{
+    text-align: center;
+    font-size: 22px;
+}
+
+.container .todo-box .todo-show ol li {
+    position: relative;
+    /* display: flex;
+    justify-content: space-between;
+    align-items: center; */
+    position: relative;
+    margin: 28px;
+    font-size: 25px;
+}
+
+.container .todo-box .todo-show .delete-btn {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 13%;
+    height: 30px;
+    font-size: 18px;
+    font-family: "Handlee", cursive;
+    color: #920101;
+    border: 2px solid #920101;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.container .todo-box .todo-show .delete-btn:hover{
+    background-color: #920101;
+    color: #fff;
+
+}
+
+
+
