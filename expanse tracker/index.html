@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Expanse Tracker</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Young+Serif&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Expense Tracker</h1>
+      <div class="userInput">
+        <div>
+          <label for="expanse-input">Expense tracker</label>
+          <input type="text" id="expanse-input" />
+        </div>
+        <div>
+          <label for="amount-input">Amount</label>
+          <input type="text" id="amount-input" />
+        </div>
+        <button class="add-btn">Add</button>
+      </div>
+      <div class="box-show">
+        <table>
+          <tr>
+            <th>id</th>
+            <th>Expense name</th>
+            <th>Amount</th>
+            <th>Action</th>
+          </tr>
+
+          <tbody id="tbody"></tbody>
+        </table>
+        <h3>Total: <span class="total">0</span> $</h3>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
