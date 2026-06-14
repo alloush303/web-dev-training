@@ -1,0 +1,134 @@
+*::before , *::after , *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* outline: 1px solid red; */
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    background-color: #121212;
+}
+
+.game-placeholder{
+    height: 100vh;
+    overflow: hidden;
+    background-image: url(/imgs/backgroundsquares.png);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    /* z-index: 0; */
+}
+.game-placeholder::before{
+    content: "";
+    position: absolute;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 300px;
+    background-color: red;
+    box-shadow: 20px 20px 50px 50px red;
+    z-index: -1;
+    animation: redbackground 6s infinite linear;
+}
+@keyframes redbackground {
+    0%{
+        top: -100%;
+        display: block;
+    }
+    100%{
+        top: 100%;
+        display: none;
+    }
+}
+
+
+.game-control{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+.game-control .points{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.game-control h3{
+    font-size: 2rem;
+    color: white;
+}
+.game-control .points span{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid white;
+   
+}
+
+
+.game-container{
+    width: 450px;
+    height: 450px;
+    background-color: #202020;
+    display: grid;
+    grid-template-columns: repeat(3 , 150px);
+    grid-template-rows: repeat(3 , 150px);
+}
+.game-container span{
+    border: 5px solid #3c3c3c;
+    display: grid;
+    place-content: center;
+    cursor: pointer;
+    text-align:center ;
+    font-weight: bold;
+    font-size: 5rem;
+}
+
+.redColor{
+    color: white;
+    text-shadow: 5px 5px 20px red;
+}
+.blueColor{
+    color: white;
+    text-shadow: 5px 5px 20px blue;
+}
+.fullCell{
+    pointer-events: none;
+    background: #0a0a0a;
+}
+
+
+.result-placeholder{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50% , -50%);
+    background-color: rgba(255 , 255 , 255 , 0);
+    text-align: center;
+    font-size: 3rem;
+    border-radius: 10px;
+    border: 10px solid red;
+    display: none;
+    color: white;
+}
+
+
+.fadeToRight{
+    animation: fadeToRight 1s linear;
+}
+@keyframes fadeToRight {
+    0%{
+        opacity: 0;
+        left: 40%;
+    }
+    100%{
+        opacity: 1;
+        left: 50%;
+    }
+}
