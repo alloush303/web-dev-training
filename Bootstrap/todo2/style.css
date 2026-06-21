@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+root {
+    font-family: align-self;
+}
+
+h2 {
+    font-size: 50px;
+}
+
+.card1 {
+    background-color: #6D71E5;
+}
+
+.card1 span svg {
+    fill: #6D71E5;
+}
+
+.card2 {
+    background-color: #B0D8D6;
+}
+
+.card2 span svg {
+    fill: #B0D8D6
+}
+
+.card3 {
+    background-color: #E7CB57;
+}
+
+.card3 span svg {
+    fill: #E7CB57
+}
+
+.card4 {
+    background-color: #B9C1CC;
+}
+
+.card4 span svg {
+    fill: #B9C1CC
+}
