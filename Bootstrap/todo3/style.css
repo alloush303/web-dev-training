@@ -6,7 +6,7 @@
 
 }
 
-root{
+:root{
     --first-color: #EC7F29;
     --secondary-color:#2CCC53;
     --section-color: #FDF1E8;
@@ -18,7 +18,7 @@ a{
 }
 
 a:hover{
-    color: #EC7F29;
+    color: var(--first-color);
 }
 
 #home-section{
@@ -34,22 +34,22 @@ a:hover{
 }
 
 #home-section .box-usrs-number{
-    background-color: #2CCC53;
+    background-color: var(--secondary-color);
 }
 
 .btn-home{
-    background-color: #EC7F29;
+    background-color: var(--first-color);
     /* color: #fff; */
 }
 
 .btn-home:hover{
-    background-color: #2CCC53;
+    background-color: var(--secondary-color);
         /* color: #fff; */
 
 }
 
 .reviews-span{
-    color: #2CCC53;
+    color: var(--secondary-color);
 }
 
 
