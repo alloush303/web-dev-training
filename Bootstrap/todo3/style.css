@@ -1,0 +1,55 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+        font-family:"Montserrat", sans-serif;
+
+}
+
+root{
+    --first-color: #EC7F29;
+    --secondary-color:#2CCC53;
+    --section-color: #FDF1E8;
+}
+
+a{
+    text-decoration: none;
+    color: #fff;
+}
+
+a:hover{
+    color: #EC7F29;
+}
+
+#home-section{
+    background: url('Untitled-3.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+#home-section h1{
+    font-size: 55px;
+}
+
+#home-section .box-usrs-number{
+    background-color: #2CCC53;
+}
+
+.btn-home{
+    background-color: #EC7F29;
+    /* color: #fff; */
+}
+
+.btn-home:hover{
+    background-color: #2CCC53;
+        /* color: #fff; */
+
+}
+
+.reviews-span{
+    color: #2CCC53;
+}
+
+
