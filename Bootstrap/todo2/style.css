@@ -28,18 +28,17 @@ root {
     fill: #B0D8D6
 }
 
-.card3 {
+.card3,
+.card3 span svg {
     background-color: #E7CB57;
 }
 
-.card3 span svg {
-    fill: #E7CB57
-}
 
-.card4 {
+
+.card4,
+.card4 span svg {
     background-color: #B9C1CC;
 }
 
-.card4 span svg {
-    fill: #B9C1CC
-}
+
+
