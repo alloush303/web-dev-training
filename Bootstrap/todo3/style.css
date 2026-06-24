@@ -1,28 +1,30 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family:"Montserrat", sans-serif;
+    font-family: "Montserrat", sans-serif;
+    /* outline: 1px solid red; */
 
 }
 
-:root{
+:root {
     --first-color: #EC7F29;
-    --secondary-color:#2CCC53;
+    --secondary-color: #2CCC53;
     --btn-hover-color: #23a042;
     --section-color: #FDF1E8;
 }
 
-a{
+.navbar a {
     text-decoration: none;
     color: #fff;
 }
 
-a:hover{
+.navbar a:hover {
     color: var(--first-color);
 }
 
-#home-section{
+#home-section,
+#getStarted-section {
     background: url('Untitled-3.jpg');
     background-size: cover;
     background-position: center;
@@ -30,51 +32,51 @@ a:hover{
     background-attachment: fixed;
 }
 
-#home-section h1{
+#home-section h1 {
     font-size: 55px;
 }
 
-#home-section .box-usrs-number{
+#home-section .box-usrs-number {
     background-color: var(--secondary-color);
 }
 
-.btn-home{
+.btn-home {
     background-color: var(--first-color);
     /* color: #fff; */
 }
 
-.btn-home:hover{
+.btn-home:hover {
     background-color: var(--secondary-color);
-        /* color: #fff; */
+    /* color: #fff; */
 
 }
 
-.reviews-span{
+.reviews-span {
     color: var(--secondary-color);
 }
 
-#about-section{
+#about-section {
     background-color: var(--section-color);
 }
 
 
-.btn-green{
+.btn-green {
     background-color: var(--secondary-color);
 }
 
-#about-section h1{
+#about-section h1 {
     font-size: 45px;
 }
 
-.btn-green:hover{
+.btn-green:hover {
     background-color: var(--btn-hover-color);
 }
 
-#experienceDesign-section .img-mobile{
+#experienceDesign-section .img-mobile {
     height: 76.5%;
 }
 
-#experienceDesign-section h1{
+#experienceDesign-section h1 {
     padding-right: 5rem;
 }
 
@@ -82,15 +84,15 @@ a:hover{
     background-color: var(--section-color);
 }
 
-.btn-orang{
+.btn-orang {
     background-color: var(--first-color);
 }
 
-.btn-orang:hover{
+.btn-orang:hover {
     background-color: #b15e1f;
 }
 
-#support-section{
+#support-section {
     background: url('Untitl67ed-3.jpg');
     background-size: cover;
     background-position: center;
@@ -99,26 +101,59 @@ a:hover{
 }
 
 
-#pricing-section .card-pink{
+#pricing-section .card-pink {
     background-color: var(--section-color);
 }
 
-#pricing-section .card-pink h1{
-    font-size: 55px;
+#pricing-section .card-pink h1,
+#pricing-section .card-orang h1 {
+    font-size: 50px;
 }
 
-#pricing-section .card-orang{
+#pricing-section .card-orang {
     background-color: var(--first-color);
 }
+
 
 /* #pricing-section .card-pricing hr{
     color: #000;
 } */
 
-#person-section{
+#person-section,
+#contant-section {
     background-color: var(--section-color);
 }
 
-/* #person-section .card.person{
-    min-height: 100%;
-} */
+#person-section .card-person {
+    height: 100%;
+}
+
+#person-section .card-person p {
+    font-size: 13px;
+    font-weight: 500;
+}
+
+#getStarted-section p {
+    font-size: 14px;
+}
+
+
+
+#contant-section .p-text {
+    font-size: 0.8rem;
+}
+
+#contant-section a {
+    text-decoration: none;
+    color: var(--first-color);
+    font-size: 12px;
+}
+
+#contant-section .social p {
+    font-size: 12px;
+}
+
+#contant-section i {
+    cursor: pointer;
+    color: var(--secondary-color);
+}
