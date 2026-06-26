@@ -68,6 +68,14 @@
     font-size: 45px;
 }
 
+#about-section .p-about {
+    font-size: 14px;
+}
+
+#about-section .box p {
+    font-size: 12px;
+}
+
 .btn-green:hover {
     background-color: var(--btn-hover-color);
 }
