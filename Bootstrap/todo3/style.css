@@ -165,3 +165,137 @@
     cursor: pointer;
     color: var(--secondary-color);
 }
+
+
+
+
+
+@media (max-width: 576px) {
+
+    #home-section {
+        padding-top: 6rem;
+    }
+
+    #home-section h1 {
+        font-size: 40px;
+        padding: 0 6rem;
+    }
+
+    #home-section p {
+        padding: 0 6rem;
+    }
+
+    #contant-section {
+        text-align: center;
+    }
+
+
+}
+
+@media(max-width: 992px) {
+    #partners-section img {
+        width: 50%;
+    }
+
+
+    #about-section .container .title {
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+
+    #about-section .container .title h1 {
+        font-size: 25px;
+    }
+
+    #about-section .container .box {
+        text-align: center;
+    }
+
+    #experienceDesign-section img {
+        text-align: center;
+        width: 25%;
+    }
+
+    #experienceDesign-section .element {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    #experienceDesign-section .element .title {
+        margin-left: 2rem;
+    }
+
+    #developmentTesting,
+    #support-section {
+        text-align: center;
+
+    }
+
+    #developmentTesting .title,
+    #support-section .title {
+        margin: 2rem 0;
+    }
+
+
+
+    #developmentTesting .dev-img,
+    #support-section .dev-img {
+        padding: 0 3rem 3rem 3rem;
+    }
+
+    #support-section .dev-img {
+        padding: 3rem 3rem 3rem 3rem;
+    }
+
+    #pricing-section {
+        text-align: center;
+    }
+
+    #pricing-section .pricing-title {
+        padding: 2rem 1rem;
+    }
+
+    #pricing-section .card-pink,
+    #pricing-section .card-orang {
+        width: 75%;
+        margin: auto;
+    }
+
+    #pricing-section .card-orang {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    #person-section .card-person {
+        width: 75%;
+        height: 40vh;
+        margin: 1rem auto;
+    }
+
+    #person-section .card-person .card-box h3,
+    #person-section .card-person .card-box p {
+        text-align: center;
+        /* padding-bottom: 2rem; */
+    }
+
+}
+
+@media(max-width: 768px) {
+
+
+
+    #home-section .mobile-img {
+        width: 200px;
+        margin: 0 auto;
+    }
+
+    #home-section .home-left {
+        text-align: center;
+    }
+
+    #home-section .box-usrs-number {
+        width: 70%;
+        padding: 0;
+        margin: 0 auto;
+    }
+}
