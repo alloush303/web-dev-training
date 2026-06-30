@@ -1,11 +1,11 @@
 import FruitCard from "./FruitCard";
 
 const fruitsArray = [
-    'apple', 'apple', 'lemon', 'banana', 'watermelon',
-    'kiwi', 'mango', 'apple', 'banana', 'lemon',
+    'cherry', 'apple', 'lemon', 'banana', 'watermelon',
+    'kiwi', 'mango', 'apricot', 'banana', 'lemon',
     'watermelon', 'kiwi', 'mango', 'apple', 'banana',
-    'lemon', 'watermelon', 'kiwi', 'mango', 'apple',
-    'banana', 'lemon', 'watermelon', 'kiwi', 'mango',
+    'lemon', 'watermelon', 'cherry', 'kiwi', 'mango', 'apple',
+    'banana', 'lemon', 'apricot', 'watermelon', 'kiwi', 'mango',
     'apple', 'banana', 'lemon', 'watermelon', 'kiwi',
     'mango', 'apple', 'banana', 'lemon', 'watermelon',
     'kiwi', 'mango', 'apple', 'banana', 'lemon',
@@ -26,13 +26,13 @@ function FruitsData() {
 
     return (
         <section>
-            <div className="container">
+            <div className="container py-5">
 
                 <h1>Fruits Store</h1>
-                <div className="row">
+                <div className="row pt-5 gap-2 gap-md-5">
                     {FruitsData.map(fruit => {
                         return (
-                            <div className="col-3 ">
+                            <div className="box-card col-12 col-sm-3 ">
                                 <FruitCard key={fruit.id} name={fruit.name} count={fruit.count} img={fruit.imgUrl} />
 
                             </div>

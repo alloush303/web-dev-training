@@ -1,15 +1,16 @@
-import React from 'react'
+import React from 'react';
+
 
 function FruitCard(props) {
     return (
         <div>
             <div className="imgFruit">
-                <img className='img-fluid' src={`${props.img}`} alt="" />
+                <img src={`${props.img}`} alt="" />
             </div>
-            <h4>{props.name}</h4>
-            <p>{props.count}</p>
-            <button>buy</button>
-        </div>
+            <h3>{props.name}</h3>
+            <p className='fs-4'>{props.count}</p>
+            <button className={`buy-btn ${props.count > 3 ? 'btn-green' : 'btn-red'}`}>buy</button>
+        </div >
     )
 }
 
