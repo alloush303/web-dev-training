@@ -13,12 +13,12 @@ const fruitsArray = [
     'lemon', 'watermelon', 'kiwi', 'mango', 'apple'
 ];
 function FruitsData() {
-    const FruitsData = fruitsArray.map((fruitName, index) => {
+    const FruitsData = fruitsArray.map((fruitItem, index) => {
         return {
             id: index + 1,
-            name: fruitName,
+            name: fruitItem,
             count: Math.floor(Math.random() * 10),
-            imgUrl: `./public/imgs/${fruitName}.jpg`
+            imgUrl: `./public/imgs/${fruitItem}.jpg`
         }
     })
 
@@ -32,8 +32,8 @@ function FruitsData() {
                 <div className="row pt-5 gap-2 gap-md-5">
                     {FruitsData.map(fruit => {
                         return (
-                            <div className="box-card col-12 col-sm-3 ">
-                                <FruitCard key={fruit.id} name={fruit.name} count={fruit.count} img={fruit.imgUrl} />
+                            <div key={fruit.id} className="box-card col-12 col-sm-3 ">
+                                <FruitCard name={fruit.name} count={fruit.count} img={fruit.imgUrl} />
 
                             </div>
 
