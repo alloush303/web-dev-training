@@ -1,14 +1,14 @@
 import FruitCard from "./FruitCard";
 
 const fruitsArray = [
-    'cherry', 'apple', 'lemon', 'banana', 'watermelon',
+    'cherry', 'apple', 'apple', 'lemon', 'banana', 'watermelon',
     'kiwi', 'mango', 'apricot', 'banana', 'lemon',
     'watermelon', 'kiwi', 'mango', 'apple', 'banana',
     'lemon', 'watermelon', 'cherry', 'kiwi', 'mango', 'apple',
     'banana', 'lemon', 'apricot', 'watermelon', 'kiwi', 'mango',
-    'apple', 'banana', 'lemon', 'watermelon', 'kiwi',
-    'mango', 'apple', 'banana', 'lemon', 'watermelon',
-    'kiwi', 'mango', 'apple', 'banana', 'lemon',
+    'apple', 'apricot', 'watermelon', 'kiwi',
+    'mango', 'apricot', 'banana', 'watermelon', 'lemon',
+    'kiwi', 'apricot', 'apple', 'banana', 'lemon',
     'watermelon', 'kiwi', 'mango', 'apple', 'banana',
     'lemon', 'watermelon', 'kiwi', 'mango', 'apple'
 ];
@@ -18,8 +18,7 @@ function FruitsData() {
         return count
     }, {})
 
-    // const countfruit = [fruitCount];
-    // console.log(fruitCount)
+    console.log(fruitCount)
 
     const FruitsData = Object.entries(fruitCount).map(([name, count], index) => {
         return {
@@ -30,7 +29,7 @@ function FruitsData() {
         }
     })
 
-    console.log(FruitsData)
+    console.log(Object.entries(fruitCount))
 
     return (
         <section>
