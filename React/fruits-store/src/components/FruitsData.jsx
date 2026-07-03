@@ -13,12 +13,20 @@ const fruitsArray = [
     'lemon', 'watermelon', 'kiwi', 'mango', 'apple'
 ];
 function FruitsData() {
-    const FruitsData = fruitsArray.map((fruitItem, index) => {
+    const fruitCount = fruitsArray.reduce((count, currenItem) => {
+        count[currenItem] = (count[currenItem] || 0) + 1;
+        return count
+    }, {})
+
+    // const countfruit = [fruitCount];
+    // console.log(fruitCount)
+
+    const FruitsData = Object.entries(fruitCount).map(([name, count], index) => {
         return {
             id: index + 1,
-            name: fruitItem,
-            count: Math.floor(Math.random() * 10),
-            imgUrl: `./public/imgs/${fruitItem}.jpg`
+            name: name,
+            count: count,
+            imgUrl: `./public/imgs/${name}.jpg`
         }
     })
 

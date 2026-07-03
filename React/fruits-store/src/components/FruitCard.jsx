@@ -11,18 +11,14 @@ function FruitCard(props) {
         }
     }
 
-    const isEmpty = currentCount === 0;
-
     return (
         <div>
             <div className="imgFruit">
                 <img src={`${props.img}`} alt="" />
             </div>
             <h3>{props.name}</h3>
-            <p className='fs-4'>{isEmpty ? 'Empty' : currentCount}</p>
-            {!isEmpty && (
-                <button onClick={userBuy} className={`buy-btn ${currentCount > 3 ? 'btn-green' : 'btn-red'}`}>buy</button>
-            )}
+            <p className='fs-4'>{currentCount}</p>
+            <button onClick={userBuy} className={`buy-btn ${currentCount >= 3 ? 'btn-green' : 'btn-red pe-none'}`}>buy</button>
         </div >
     )
 }

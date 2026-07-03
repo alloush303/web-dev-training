@@ -7,8 +7,6 @@ function App() {
   return (
     <>
       <FruitsData />
-      {/* <FruitCard /> */}
-
     </>
   )
 }
