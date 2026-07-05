@@ -1,0 +1,42 @@
+@import url('https://googleapis.com');
+
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  /* outline: 1px solid red; */
+}
+
+:root {
+  --welcome-main-color: #3AAAFE;
+}
+
+body {
+  font-family: "Caveat", cursive;
+}
+
+.welcome-container {
+  background: url('./public/imgs/welcomeBackGround1.jpg') center / cover no-repeat;
+  ;
+}
+
+.welcome-box {
+  border: 1px solid var(--welcome-main-color);
+  transition: all 0.3s ease;
+}
+
+.welcome-box:hover {
+  border: 1px solid white;
+  box-shadow: 2px 2px 10px 5px var(--welcome-main-color);
+}
+
+.btn-box {
+  background-color: var(--welcome-main-color);
+  color: white;
+}
+
+.btn-box:hover {
+  border: 1px solid var(--welcome-main-color);
+  color: var(--welcome-main-color);
+}
