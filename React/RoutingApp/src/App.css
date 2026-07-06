@@ -16,19 +16,26 @@ body {
   font-family: "Caveat", cursive;
 }
 
-.welcome-container {
+.welcom-container {
   background: url('./public/imgs/welcomeBackGround1.jpg') center / cover no-repeat;
   ;
 }
 
-.welcome-box {
+.login-container {
+  background: url('./public/imgs/loginbackground.jpg') center / cover no-repeat;
+  ;
+}
+
+.card-box {
   border: 1px solid var(--welcome-main-color);
   transition: all 0.3s ease;
 }
 
-.welcome-box:hover {
+.card-box:hover {
   border: 1px solid white;
   box-shadow: 2px 2px 10px 5px var(--welcome-main-color);
+  backdrop-filter: blur(12px);
+
 }
 
 .btn-box {
@@ -39,4 +46,24 @@ body {
 .btn-box:hover {
   border: 1px solid var(--welcome-main-color);
   color: var(--welcome-main-color);
+}
+
+.error-message {
+  color: red;
+}
+
+.lable-text {
+  padding-left: 6rem;
+}
+
+.input-box {
+  border: 1px solid var(--welcome-main-color);
+  transition: all 0.3s ease;
+}
+
+.input-box:focus {
+  outline: none;
+  border: 1px solid white;
+  box-shadow: 2px 2px 10px 5px var(--welcome-main-color);
+
 }

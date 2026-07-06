@@ -1,0 +1,21 @@
+@import url('https://googleapis.com');
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* outline: 1px solid red; */
+}
+
+:root {
+    --welcome-main-color: #3AAAFE;
+}
+
+body {
+    font-family: "Caveat", cursive;
+}
+
+.nav-box {
+    border-right: 1px solid var(--welcome-main-color);
+}

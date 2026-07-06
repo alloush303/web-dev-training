@@ -31,26 +31,29 @@ function Login() {
     }
 
     return (
-        <div className='welcome-container d-flex flex-column justify-content-center align-items-center vh-100 text-center'>
-            <div className="welcome-box box w-50 p-3 rounded-5">
-                <h1>Login</h1>
+        <div className='login-container d-flex flex-column justify-content-center align-items-center vh-100 text-center'>
+            <div className="card-box  w-50 py-5 rounded-5">
+                <h1 className='mb-5 fw-bold'>Login</h1>
                 {errorMessage && (
-                    <div>
+                    <div className='error-message m-4'>
                         {errorMessage}
                     </div>
                 )}
                 <form onSubmit={handelSubmit} noValidate>
                     <div className=''>
-                        <input className='w-75' type="text" placeholder='input user name' onChange={(e) => setUserName(e.target.value)} />
+                        <h6 className='lable-text text-start '>User Name</h6>
+                        <input className='input-box w-75 p-2 mb-2 rounded-3' type="text" placeholder='input user name' onChange={(e) => setUserName(e.target.value)} />
                     </div>
                     <div>
-                        <input className='w-75' type="email" placeholder='input your email' onChange={(e) => setEmail(e.target.value)} />
+                        <h6 className='lable-text text-start '>Email</h6>
+                        <input className='input-box w-75 p-2 mb-2 rounded-3' type="email" placeholder='input your email' onChange={(e) => setEmail(e.target.value)} />
                     </div>
                     <div>
-                        <input className='w-75' type="password" placeholder='input your password' onChange={(e) => setPassword(e.target.value)} />
+                        <h6 className='lable-text text-start '>Password</h6>
+                        <input className='input-box w-75 p-2 mb-2 rounded-3' type="password" placeholder='input your password' onChange={(e) => setPassword(e.target.value)} />
                     </div>
                     <div>
-                        <button type='submit' className='btn w-75'>Login</button>
+                        <button type='submit' className='btn-box btn mt-5 w-25'>Login</button>
 
                     </div>
                 </form>
