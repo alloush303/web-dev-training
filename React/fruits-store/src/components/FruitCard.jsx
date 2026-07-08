@@ -5,6 +5,7 @@ function FruitCard(props) {
 
     const [currentCount, setCurrentCount] = useState(props.count);
 
+    // ! try using diffrent names for click actions such as (handlePurchase)
     const userBuy = () => {
         if (currentCount > 0) {
             setCurrentCount(currentCount - 1)

@@ -16,9 +16,10 @@ function FruitsData() {
     const fruitCount = fruitsArray.reduce((count, currenItem) => {
         count[currenItem] = (count[currenItem] || 0) + 1;
         return count
-    }, {})
 
+    }, {})
     console.log(fruitCount)
+
 
     const FruitsData = Object.entries(fruitCount).map(([name, count], index) => {
         return {
