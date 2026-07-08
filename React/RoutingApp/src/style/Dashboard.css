@@ -1,0 +1,48 @@
+@import url('https://googleapis.com');
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* outline: 1px solid red; */
+}
+
+:root {
+    --welcome-second-color: #929292;
+}
+
+body {
+    font-family: "Caveat", cursive;
+}
+
+.dashboard-continer {
+    background: url('../public/imgs/dashboard.jpg') center / cover no-repeat;
+}
+
+
+
+
+.nav-box {
+    box-shadow: 1px 1px 5px 1px var(--welcome-second-color);
+    backdrop-filter: blur(3px);
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.nav-box:hover {
+    box-shadow: 5px 5px 10px 5px var(--welcome-second-color);
+    backdrop-filter: blur(6px);
+}
+
+.sidebar-link {
+    text-decoration: none;
+    text-align: center;
+    color: var(--welcome-second-color);
+    transition: all 0.3s ease;
+}
+
+.sidebar-link:hover,
+.sidebar-link.active {
+    color: black;
+}

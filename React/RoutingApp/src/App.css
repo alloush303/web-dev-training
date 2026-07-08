@@ -17,12 +17,12 @@ body {
 }
 
 .welcom-container {
-  background: url('./public/imgs/welcomeBackGround1.jpg') center / cover no-repeat;
+  background: url('../public/imgs/welcomeBackGround1.jpg') center / cover no-repeat;
   ;
 }
 
 .login-container {
-  background: url('./public/imgs/loginbackground.jpg') center / cover no-repeat;
+  background: url('../public/imgs/loginbackground.jpg') center / cover no-repeat;
   ;
 }
 

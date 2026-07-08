@@ -1,0 +1,16 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* outline: 1px solid red; */
+}
+
+
+
+.linner {
+    display: block;
+    margin-top: 1rem;
+    width: 100%;
+    height: 1px;
+    background-color: black;
+}
