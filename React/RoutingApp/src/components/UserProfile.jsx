@@ -8,8 +8,9 @@ function UserProfile() {
     }
     return (
         <div>
-            <h2>User Profile setting</h2>
+            <h3>User Profile setting</h3>
             <span className="linner mb-3"></span>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nostrum incidunt quasi dolor dolorem error, repellendus sed molestiae. Dolorem mollitia non perferendis totam neque quisquam harum?</p>
             <button className='btn-box btn' onClick={goBack}>Back</button>
         </div>
     )

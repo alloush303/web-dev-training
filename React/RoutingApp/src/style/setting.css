@@ -14,3 +14,14 @@
     height: 1px;
     background-color: black;
 }
+
+.setting-link {
+    /* text-decoration: none; */
+    text-align: center;
+    color: var(--welcome-second-color);
+    transition: all 0.3s ease;
+}
+
+.setting-link:hover {
+    color: black;
+}

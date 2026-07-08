@@ -13,7 +13,10 @@ function Dashboard() {
         <div className='dashboard-continer vh-100 overflow-hidden' >
             <div className="row">
                 <div className="nav-box col-2 vh-100 d-flex justify-content-center">
-                    <div className="my-5">
+                    <div className="my-5 ">
+                        <div className='d-flex justify-content-center'>
+                            <img className='w-50 rounded-5' src="../public/imgs/profile.jpg" alt="Profile photo" />
+                        </div>
 
                         <nav className='d-flex flex-column'>
                             <NavLink className='sidebar-link my-3 fs-5' to='/dashboard' end >Home</NavLink>

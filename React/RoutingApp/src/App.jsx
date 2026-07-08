@@ -10,6 +10,7 @@ import Contact from './components/Contact'
 import Setting from './components/Setting'
 import './App.css'
 import UserProfile from './components/UserProfile'
+import Security from './components/Security'
 
 function App() {
   return (
@@ -24,10 +25,10 @@ function App() {
             <Route path='services' element={<Services />} />
             <Route path='products' element={<Products />} />
             <Route path='contact' element={<Contact />} />
-            <Route path='setting' element={<Setting />} >
-
-            </Route>
+            <Route path='setting/*' element={<Setting />} />
             <Route path='userprofile' element={<UserProfile />} />
+
+            <Route path='security' element={<Security />} />
 
 
           </Route>
