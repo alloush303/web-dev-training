@@ -1,0 +1,17 @@
+:root {
+    --main-color: #ff7b00;
+}
+
+
+.btn-filter-notActive {
+    background-color: #fff;
+    border: 1px solid var(--main-color);
+    transition: all 0.5s ease;
+}
+
+.btn-filter-notActive:hover,
+.btn-filter-active {
+    color: #fff;
+    background-color: var(--main-color);
+    border: 1px solid var(--main-color);
+}
