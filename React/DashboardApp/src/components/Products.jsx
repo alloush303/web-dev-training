@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { getProducts } from '../api/ProductsApi'
 import '../style/Products.css'
+import ProductCard from './ProductCard'
+import ProductDetails from './ProductDetails'
 
 function Products() {
 
@@ -63,37 +65,15 @@ function Products() {
 
     return (
         <div className="container py-4 overflow-auto h-100">
-            <h2 className="mb-4 text-center fw-bold">Products List</h2>
+            <h1 className="mb-4 text-center fw-bold">Products List</h1>
             <div className='d-flex justify-content-center gap-3 mb-3'>
                 {category.map((cat, index) => (
                     <button key={index} onClick={() => handleFilter(cat)} className={` rounded-pill px-3 ${selectCategory === cat ? 'btn-filter-active' : 'btn-filter-notActive'}`}>{cat}</button>))}
             </div>
-            <div className="row g-4 justify-content-center">
+            <div className="row g-4 gap-4 justify-content-center">
                 {filteredProduct.map((product) => (
-                    <div key={product.id} className="col-12 col-md-6 col-lg-4">
-                        <div className="card h-100 ">
-                            <img
-                                src={product.image}
-                                alt={product.title}
-
-                                style={{ height: '180px', objectFit: 'contain', width: '100%' }}
-                            />
-                            <div >
-                                <div>
-                                    <span >
-                                        {product.category}
-                                    </span>
-                                    <h6 title={product.title}>
-                                        {product.title}
-                                    </h6>
-
-                                </div>
-                                <div >
-                                    <span >${product.price}</span>
-                                    <button >See More</button>
-                                </div>
-                            </div>
-                        </div>
+                    <div key={product._id} className="box-card col-11 col-md-5 col-lg-3">
+                        <ProductCard id={product._id} img={product.image} title={product.title} category={product.category} price={product.price} />
                     </div>
                 ))}
             </div>

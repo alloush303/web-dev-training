@@ -8,6 +8,7 @@ import Setting from './components/Setting'
 import Theme from './components/Theme'
 import Currency from './components/Currency'
 import Userprofile from './components/Userprofile'
+import ProductDetails from './components/ProductDetails'
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path='dashboard/*' element={<Dashboard />} >
             <Route index element={<Home />} />
             <Route path='products' element={<Products />} />
+            <Route path='products/:id' element={<ProductDetails />} />
             <Route path='setting/*' element={<Setting />} >
               <Route path='theme' element={<Theme />} />
               <Route path='currency' element={<Currency />} />
