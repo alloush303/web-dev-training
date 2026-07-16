@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import { getProductById } from '../api/ProductsApi'
+import '../style/ProductaDetails.css'
 
 function ProductDetails() {
 
@@ -11,6 +12,10 @@ function ProductDetails() {
     let [error, setError] = useState(null)
 
     console.log(id)
+
+    let handleGoBack = () => {
+        navigate(-1)
+    }
 
     useEffect(() => {
         loadProduct()
@@ -44,16 +49,22 @@ function ProductDetails() {
     console.log(product)
     return (
         <div >
-            <h1 className='mb-5'>Product: {product.brand}</h1>
+            <button onClick={handleGoBack} className='goBack-btn'><i class="bi bi-arrow-left"></i>Go Back</button>
+            <h1 ><span className=' fw-bold'>Product:</span> {product.brand}</h1>
+            <span className='linner mb-5'></span>
+
             <div className='d-flex justify-content-center'>
-                <div className='border w-100 rounded-5 me-4'>
+                <div className='img-box   rounded-5 me-4'>
                     <img className='w-100 rounded-5' src={product.image} alt="" />
                 </div>
-                <div className=''>
-                    <h5>Title: {product.title}</h5>
-                    <p>Description: {product.description}</p>
-                    <p>Price: {product.price} $</p>
-                    <p >Size: {product.size}</p>
+                <div>
+                    <h5><span className='fs-5 fw-bold'>Title:</span> {product.title}</h5>
+                    <span className='linner mb-3'></span>
+                    <p className='w-75'><span className='fs-5 fw-bold'>Description:</span> {product.description}</p>
+                    <span className='linner mb-3'></span>
+                    <p><span className='fs-5 fw-bold'>Price:</span> {product.price} $</p>
+                    <span className='linner mb-3'></span>
+                    <p><span className='fs-5 fw-bold'>Size:</span> {product.size}</p>
                 </div>
             </div>
             <h1>{product.tilte}</h1>

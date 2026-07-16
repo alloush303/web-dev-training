@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { getProducts } from '../api/ProductsApi'
 import '../style/Products.css'
-import ProductCard from './ProductCard'
+import ProductCard from '../components/ProductCard'
 import ProductDetails from './ProductDetails'
 
 function Products() {

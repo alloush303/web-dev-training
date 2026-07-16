@@ -1,18 +1,23 @@
 import React from 'react'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+import 'bootstrap-icons/font/bootstrap-icons.css';
 import './App.css'
-import Dashboard from './components/Dashboard'
-import Home from './components/Home'
-import Products from './components/Products'
-import Setting from './components/Setting'
-import Theme from './components/Theme'
-import Currency from './components/Currency'
-import Userprofile from './components/Userprofile'
-import ProductDetails from './components/ProductDetails'
+import Dashboard from './pages/Dashboard'
+import Home from './pages/Home'
+import Products from './pages/Products'
+import Setting from './pages/Setting'
+import Theme from './pages/Theme'
+import Currency from './pages/Currency'
+import Userprofile from './pages/Userprofile'
+import ProductDetails from './pages/ProductDetails'
+import { ThemeProvider } from './context/ThemeContext';
 
 function App() {
   return (
     <>
+      <ThemeProvider>
+        <Products />
+      </ThemeProvider>
       <Router>
         <Routes>
           <Route path='dashboard/*' element={<Dashboard />} >

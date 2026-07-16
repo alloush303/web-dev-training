@@ -7,7 +7,6 @@ function ProductCard(props) {
     const navigate = useNavigate()
 
     const handleSeeMore = () => {
-        alert(`${props.id}`)
         navigate(`/dashboard/products/${props.id}`)
     }
 

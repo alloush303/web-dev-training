@@ -1,0 +1,37 @@
+:root {
+    --main-color: #ff7b00;
+}
+
+.goBack-btn {
+    width: 8rem;
+    margin-bottom: 1rem;
+    background-color: #fff;
+    border: 1px solid var(--main-color);
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+
+.goBack-btn:hover {
+    border: 1px solid var(--main-color);
+    box-shadow: 2px 2px 11px var(--main-color);
+}
+
+.goBack-btn i {
+    padding-right: 5px;
+    color: var(--main-color);
+    font-size: 20px;
+}
+
+.img-box {
+    width: 75%;
+    border: 2px solid var(--main-color);
+    box-shadow: 2px 2px 11px var(--main-color);
+
+}
+
+.linner {
+    display: block;
+    width: 80%;
+    height: 2px;
+    background-color: var(--main-color);
+}
