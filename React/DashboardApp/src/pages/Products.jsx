@@ -1,10 +1,13 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { getProducts } from '../api/ProductsApi'
 import '../style/Products.css'
 import ProductCard from '../components/ProductCard'
 import ProductDetails from './ProductDetails'
+import { ThemeContext } from '../context/ThemeContext'
 
 function Products() {
+    let { theme, toggleTheme } = useContext(ThemeContext)
+    console.log(theme)
 
     let [products, setProducts] = useState([])
     let [filteredProduct, setFilteredProduct] = useState([])
@@ -64,7 +67,7 @@ function Products() {
 
 
     return (
-        <div className="container py-4 overflow-auto h-100">
+        <div className="container py-4 overflow-auto h-100 " style={{ backgroundColor: theme === 'light' ? '#fff' : '#000' }}>
             <h1 className="mb-4 text-center fw-bold">Products List</h1>
             <div className='d-flex justify-content-center gap-3 mb-3'>
                 {category.map((cat, index) => (

@@ -16,22 +16,21 @@ function App() {
   return (
     <>
       <ThemeProvider>
-        <Products />
-      </ThemeProvider>
-      <Router>
-        <Routes>
-          <Route path='dashboard/*' element={<Dashboard />} >
-            <Route index element={<Home />} />
-            <Route path='products' element={<Products />} />
-            <Route path='products/:id' element={<ProductDetails />} />
-            <Route path='setting/*' element={<Setting />} >
-              <Route path='theme' element={<Theme />} />
-              <Route path='currency' element={<Currency />} />
-              <Route path='userprofile' element={<Userprofile />} />
+        <Router>
+          <Routes>
+            <Route path='dashboard/*' element={<Dashboard />} >
+              <Route index element={<Home />} />
+              <Route path='products' element={<Products />} />
+              <Route path='products/:id' element={<ProductDetails />} />
+              <Route path='setting/*' element={<Setting />} >
+                <Route path='theme' element={<Theme />} />
+                <Route path='currency' element={<Currency />} />
+                <Route path='userprofile' element={<Userprofile />} />
+              </Route>
             </Route>
-          </Route>
-        </Routes>
-      </Router>
+          </Routes>
+        </Router>
+      </ThemeProvider>
     </>
   )
 }
