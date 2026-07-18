@@ -1,14 +1,22 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { useNavigate } from 'react-router-dom'
 import '../style/ProductCard.css'
+import { CurenccyContext } from '../context/CurenccyContext'
+import { CurenccyConverter } from '../utilites/CurenccyConverter'
 
 function ProductCard(props) {
+    let { curenccy } = useContext(CurenccyContext)
 
     const navigate = useNavigate()
 
     const handleSeeMore = () => {
         navigate(`/dashboard/products/${props.id}`)
     }
+
+    console.log(curenccy === 'syrianBounds'
+        ? `${CurenccyConverter(+props.price)} L.S`
+        : `${props.price} $`
+    )
 
 
     return (
@@ -27,7 +35,10 @@ function ProductCard(props) {
 
                 </div>
                 <div className='d-flex justify-content-between align-items-center m-3'>
-                    <span className='fw-bold'>${props.price}</span>
+                    <span> {curenccy === 'syrianBounds'
+                        ? `${CurenccyConverter(+props.price)} ls`
+                        : `${props.price} $`
+                    }</span>
                     <button onClick={handleSeeMore} className='btn-card'>See More</button>
                 </div>
             </div>

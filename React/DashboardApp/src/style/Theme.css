@@ -1,0 +1,49 @@
+:root {
+    --main-color: #ff7b00;
+}
+
+.dark {
+    background-color: #000;
+    color: var(--main-color);
+}
+
+.btn-update {
+    width: 50%;
+    padding: 2px;
+    border-radius: 5px;
+}
+
+
+
+.btn-light {
+    background-color: #fff;
+    color: #000000c7;
+    border: 1px solid var(--main-color);
+    transition: all 0.3s ease;
+}
+
+.btn-light:hover,
+.btn-light:disabled {
+    background-color: var(--main-color);
+    color: #fff;
+    border: 1px solid var(--main-color);
+}
+
+.btn-dark {
+    background-color: #000;
+    color: var(--main-color);
+    border: 1px solid var(--main-color);
+    transition: all 0.3s ease;
+}
+
+.btn-dark:hover,
+.btn-dark:disabled {
+    background-color: var(--main-color);
+    color: #000;
+    border: 1px solid var(--main-color);
+}
+
+.select-dark {
+    background-color: #000;
+    color: var(--main-color);
+}

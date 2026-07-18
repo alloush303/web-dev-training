@@ -6,7 +6,7 @@ import Userprofile from './Userprofile'
 
 function Setting() {
     return (
-        <div>
+        <div >
             <h1>Setting:</h1>
             <div className='container py-3 '>
                 <nav className='d-flex justify-content-start gap-5'>

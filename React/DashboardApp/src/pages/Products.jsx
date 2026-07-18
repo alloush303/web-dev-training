@@ -4,9 +4,10 @@ import '../style/Products.css'
 import ProductCard from '../components/ProductCard'
 import ProductDetails from './ProductDetails'
 import { ThemeContext } from '../context/ThemeContext'
+import { CurenccyProvider } from '../context/CurenccyContext'
 
 function Products() {
-    let { theme, toggleTheme } = useContext(ThemeContext)
+    let { theme } = useContext(ThemeContext)
     console.log(theme)
 
     let [products, setProducts] = useState([])

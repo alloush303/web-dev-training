@@ -1,9 +1,12 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import { getProductById } from '../api/ProductsApi'
 import '../style/ProductaDetails.css'
+import { CurenccyContext } from '../context/CurenccyContext'
+import { CurenccyConverter } from '../utilites/CurenccyConverter'
 
 function ProductDetails() {
+    let { curenccy } = useContext(CurenccyContext)
 
     let { id } = useParams()
     let navigate = useNavigate()
@@ -62,7 +65,10 @@ function ProductDetails() {
                     <span className='linner mb-3'></span>
                     <p className='w-75'><span className='fs-5 fw-bold'>Description:</span> {product.description}</p>
                     <span className='linner mb-3'></span>
-                    <p><span className='fs-5 fw-bold'>Price:</span> {product.price} $</p>
+                    <p><span className='fs-5 fw-bold'>Price:</span> {curenccy === 'syrianBounds'
+                        ? `${CurenccyConverter(+product.price)} L.S`
+                        : `${product.price} $`
+                    }</p>
                     <span className='linner mb-3'></span>
                     <p><span className='fs-5 fw-bold'>Size:</span> {product.size}</p>
                 </div>
