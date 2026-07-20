@@ -12,26 +12,29 @@ import Userprofile from './pages/Userprofile'
 import ProductDetails from './pages/ProductDetails'
 import { ThemeProvider } from './context/ThemeContext';
 import { CurenccyProvider } from './context/CurenccyContext';
+import { UserProfileProvider } from './context/UserProfileContext';
 
 function App() {
   return (
     <>
       <ThemeProvider>
         <CurenccyProvider>
-          <Router>
-            <Routes>
-              <Route path='dashboard/*' element={<Dashboard />} >
-                <Route index element={<Home />} />
-                <Route path='products' element={<Products />} />
-                <Route path='products/:id' element={<ProductDetails />} />
-                <Route path='setting/*' element={<Setting />} >
-                  <Route path='theme' element={<Theme />} />
-                  <Route path='currency' element={<Currency />} />
-                  <Route path='userprofile' element={<Userprofile />} />
+          <UserProfileProvider>
+            <Router>
+              <Routes>
+                <Route path='dashboard/*' element={<Dashboard />} >
+                  <Route index element={<Home />} />
+                  <Route path='products' element={<Products />} />
+                  <Route path='products/:id' element={<ProductDetails />} />
+                  <Route path='setting/*' element={<Setting />} >
+                    <Route path='theme' element={<Theme />} />
+                    <Route path='currency' element={<Currency />} />
+                    <Route path='userprofile' element={<Userprofile />} />
+                  </Route>
                 </Route>
-              </Route>
-            </Routes>
-          </Router>
+              </Routes>
+            </Router>
+          </UserProfileProvider>
         </CurenccyProvider>
       </ThemeProvider>
     </>

@@ -8,14 +8,25 @@
     /* outline: 1px solid red; */
 }
 
+:root {
+    --main-color: #ff7b00;
+}
+
 body {
     font-family: "Caveat", cursive;
 }
 
 
-.nav-profileInfo,
+.nav-profileInfo {
+    border: 1px solid var(--main-color);
+}
+
 .sideBar {
-    background-color: #a1a1a144;
-    /* border-bottom: 1px solid #a1a1a144; */
-    box-shadow: 1px 1px 10px 5px #a1a1a144;
+    border-right: 1px solid var(--main-color);
+    transition: all 0.3s ease;
+}
+
+.sideBar:hover {
+    box-shadow: 1px 1px 10px 1px var(--main-color);
+
 }

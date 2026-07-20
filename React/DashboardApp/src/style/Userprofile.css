@@ -1,0 +1,11 @@
+:root {
+    --main-color: #ff7b00;
+}
+
+.input-dark {
+    border: 1px solid var(--main-color);
+    border-radius: 5px;
+    background-color: #000;
+    color: #ff7b00;
+
+}

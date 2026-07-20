@@ -5,8 +5,8 @@ export let ThemeContext = createContext()
 export function ThemeProvider({ children }) {
     let [theme, setTheme] = useState('light')
 
-    let selectTheme = (tempValue) => {
-        setTheme(tempValue)
+    let selectTheme = (Value) => {
+        setTheme(Value)
     }
 
     let value = {

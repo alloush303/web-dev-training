@@ -1,16 +1,22 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { NavLink, Outlet } from 'react-router-dom'
 import Home from './Home'
 import Products from './Products'
 import Setting from './Setting'
+import { UserProfileContext } from '../context/UserProfileContext'
 
 function Dashboard() {
+
+    let { userProfile } = useContext(UserProfileContext)
+
+    console.log(userProfile.email)
+
     return (
         <div className="dashboard-container vh-100 overflow-hidden d-flex flex-column">
             <div className='nav-profileInfo   '>
                 <div className="d-flex gap-4 ps-3 fw-bold pt-3">
-                    <p>Alloush</p>
-                    <p>alloshali303@gmail.com</p>
+                    <p>{userProfile.userName}</p>
+                    <p>{userProfile.email}</p>
                 </div>
             </div>
             <div className="row flex-grow-1  overflow-hidden w-100">
