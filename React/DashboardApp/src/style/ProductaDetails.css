@@ -5,7 +5,8 @@
 .goBack-btn {
     width: 8rem;
     margin-bottom: 1rem;
-    background-color: #fff;
+    background-color: #ffffff00;
+    color: var(--main-color);
     border: 1px solid var(--main-color);
     border-radius: 25px;
     transition: all 0.3s ease;
@@ -13,7 +14,7 @@
 
 .goBack-btn:hover {
     border: 1px solid var(--main-color);
-    box-shadow: 2px 2px 11px var(--main-color);
+    box-shadow: 2px 2px 20px var(--main-color);
 }
 
 .goBack-btn i {

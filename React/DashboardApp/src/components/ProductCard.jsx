@@ -3,8 +3,10 @@ import { useNavigate } from 'react-router-dom'
 import '../style/ProductCard.css'
 import { CurenccyContext } from '../context/CurenccyContext'
 import { CurenccyConverter } from '../utilites/CurenccyConverter'
+import { ThemeContext } from '../context/ThemeContext'
 
 function ProductCard(props) {
+    let { theme } = useContext(ThemeContext)
     let { curenccy } = useContext(CurenccyContext)
 
     const navigate = useNavigate()
@@ -39,7 +41,7 @@ function ProductCard(props) {
                         ? `${CurenccyConverter(+props.price)} ls`
                         : `${props.price} $`
                     }</span>
-                    <button onClick={handleSeeMore} className='btn-card'>See More</button>
+                    <button onClick={handleSeeMore} className={`${theme === 'light' ? 'btn-light' : 'btn-dark'} btn-card`}>See More</button>
                 </div>
             </div>
         </div>

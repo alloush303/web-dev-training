@@ -68,11 +68,12 @@ function Products() {
 
 
     return (
-        <div className="container py-4 overflow-auto h-100 " style={{ backgroundColor: theme === 'light' ? '#fff' : '#000' }}>
+        <div className="container py-4 overflow-auto h-100 ">
             <h1 className="mb-4 text-center fw-bold">Products List</h1>
             <div className='d-flex justify-content-center gap-3 mb-3'>
                 {category.map((cat, index) => (
-                    <button key={index} onClick={() => handleFilter(cat)} className={` rounded-pill px-3 ${selectCategory === cat ? 'btn-filter-active' : 'btn-filter-notActive'}`}>{cat}</button>))}
+                    <button key={index} onClick={() => handleFilter(cat)} className={` rounded-pill px-3 ${selectCategory === cat ? 'btn-filter-active' : 'btn-filter-notActive'} 
+                    ${theme === "light" ? 'btn-filter-light' : 'btn-filter-dark'}`}>{cat}</button>))}
             </div>
             <div className="row g-4 gap-4 justify-content-center">
                 {filteredProduct.map((product) => (

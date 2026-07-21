@@ -1,0 +1,33 @@
+:root {
+    --main-color: #ff7b00;
+}
+
+.setting-nav nav a {
+    text-decoration: none;
+    padding: 0.3rem 0.5rem;
+    font-size: 14px;
+    font-weight: bold;
+    border: 1px solid var(--main-color);
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+
+.setting-nav .nav-light a {
+    color: #000;
+}
+
+.setting-nav .nav-dark a {
+    color: var(--main-color);
+}
+
+.setting-nav .nav-light a:hover,
+.setting-nav .nav-light a.active {
+    background-color: var(--main-color);
+    color: #fff;
+}
+
+.setting-nav .nav-dark a:hover,
+.setting-nav .nav-dark a.active {
+    background-color: var(--main-color);
+    color: #000;
+}

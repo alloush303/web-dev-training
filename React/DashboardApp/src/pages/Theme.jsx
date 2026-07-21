@@ -18,7 +18,7 @@ function Theme() {
             <div className={theme + " gap-4 d-flex flex-column  w-25 mt-4"}>
                 <div className='d-flex flex-column'>
                     <label>theme</label>
-                    <select className={`${theme === 'light' ? 'select-light' : 'select-dark'} text-center`} value={tempValue} onChange={(e) => setTempValue(e.target.value)}>
+                    <select className={`${theme === 'light' ? 'select-light' : 'select-dark'} text-center p-2`} value={tempValue} onChange={(e) => setTempValue(e.target.value)}>
                         <option value="light">light</option>
                         <option value="dark">dark</option>
                     </select>

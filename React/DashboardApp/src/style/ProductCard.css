@@ -27,10 +27,17 @@
 .btn-card {
     width: 6rem;
     padding: 3px;
-    background-color: #fff;
     border: 1px solid var(--main-color);
     border-radius: 25px;
     transition: all 0.5s ease;
+}
+
+.btn-light {
+    background-color: #fff;
+}
+
+.btn-dark {
+    background-color: #fff;
 }
 
 .btn-card:hover {
