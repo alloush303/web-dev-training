@@ -14,7 +14,7 @@ function Theme() {
     console.log(theme)
     return (
         <div className={theme} style={{ backgroundColor: theme === 'light' ? '#fff' : '#000' }}>
-            <h4>App Setting:</h4>
+            <h4>Theme Setting:</h4>
             <div className={theme + " gap-4 d-flex flex-column  w-25 mt-4"}>
                 <div className='d-flex flex-column'>
                     <label>theme</label>

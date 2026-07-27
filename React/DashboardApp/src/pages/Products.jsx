@@ -1,5 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react'
-import { getProducts } from '../api/ProductsApi'
+// import { getProducts } from '../api/ProductsApi'
+import useFetch from '../hooks/useFetch'
 import '../style/Products.css'
 import ProductCard from '../components/ProductCard'
 import ProductDetails from './ProductDetails'
@@ -8,25 +9,19 @@ import { CurenccyProvider } from '../context/CurenccyContext'
 
 function Products() {
     let { theme } = useContext(ThemeContext)
-    console.log(theme)
 
+    let { data, loading, error } = useFetch("https://fakestoreapi.noksha.dev/api/products")
+    console.log(data)
     let [products, setProducts] = useState([])
     let [filteredProduct, setFilteredProduct] = useState([])
     let [category, setCategory] = useState([])
     let [selectCategory, setSelectCategory] = useState('All')
-    let [loading, setLoading] = useState(false)
-    let [error, setError] = useState(null)
+    // let [loading, setLoading] = useState(false)
+    // let [error, setError] = useState(null)
 
     useEffect(() => {
-        loadProducts()
-    }, [])
-
-    let loadProducts = async () => {
-        setLoading(true)
-        setError(null)
-
-        try {
-            let data = await getProducts()
+        // loadProducts()
+        if (data) {
             setProducts(data)
             setFilteredProduct(data)
             let allCategory = data.map(item => item.category).reduce((cat, currentCat) => {
@@ -36,13 +31,31 @@ function Products() {
                 return cat
             }, ['All'])
             setCategory(allCategory)
-            setLoading(false)
         }
-        catch (err) {
-            setError('Faild to load Products')
-            setLoading(false)
-        }
-    }
+    }, [data])
+
+    // let loadProducts = async () => {
+    //     setLoading(true)
+    //     setError(null)
+
+    //     try {
+    //         let data = await getProducts()
+    //         setProducts(data)
+    //         setFilteredProduct(data)
+    //         let allCategory = data.map(item => item.category).reduce((cat, currentCat) => {
+    //             if (!cat.includes(currentCat)) {
+    //                 cat.push(currentCat)
+    //             }
+    //             return cat
+    //         }, ['All'])
+    //         setCategory(allCategory)
+    //         setLoading(false)
+    //     }
+    //     catch (err) {
+    //         setError('Faild to load Products')
+    //         setLoading(false)
+    //     }
+    // }
 
     const handleFilter = (category) => {
         setSelectCategory(category)
@@ -62,7 +75,7 @@ function Products() {
     }
     if (error) {
         return (
-            <div>{error}</div>
+            <div className='text-center fs-1 fw-bold'>{error}...😒😒😒</div>
         )
     }
 
