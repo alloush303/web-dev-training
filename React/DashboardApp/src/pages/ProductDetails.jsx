@@ -1,42 +1,50 @@
 import React, { useContext, useEffect, useState } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
-import { getProductById } from '../api/ProductsApi'
+// import { getProductById } from '../api/ProductsApi'
 import '../style/ProductaDetails.css'
 import { CurenccyContext } from '../context/CurenccyContext'
 import { CurenccyConverter } from '../utilites/CurenccyConverter'
+import useFetch from '../hooks/useFetch'
 
 function ProductDetails() {
     let { curenccy } = useContext(CurenccyContext)
-
     let { id } = useParams()
-    let navigate = useNavigate()
-    let [product, setProduct] = useState({})
-    let [loading, setLoading] = useState(false)
-    let [error, setError] = useState(null)
 
-    console.log(id)
+    let { data: product, loading, error } = useFetch(`https://fakestoreapi.noksha.dev/api/products/${id}`)
+
+    let navigate = useNavigate()
+    // let [product, setProduct] = useState(null)
+    // let [loading, setLoading] = useState(false)
+    // let [error, setError] = useState(null)
+
 
     let handleGoBack = () => {
         navigate(-1)
     }
 
-    useEffect(() => {
-        loadProduct()
-    }, [id])
+    // useEffect(() => {
+    //     // loadProduct()
+    //     if (data) {
+    //         setProduct(data)
+    //         console.log(product)
 
-    let loadProduct = async () => {
-        setLoading(true)
-        setError(null)
-        try {
-            let data = await getProductById(id)
-            setProduct(data)
-            setLoading(false)
-        }
-        catch (error) {
-            setError('Error to loading product')
-            setLoading(false)
-        }
-    }
+    //     }
+
+    // }, [id])
+
+    // let loadProduct = async () => {
+    //     setLoading(true)
+    //     setError(null)
+    //     try {
+    //         let data = await getProductById(id)
+    //         setProduct(data)
+    //         setLoading(false)
+    //     }
+    //     catch (error) {
+    //         setError('Error to loading product')
+    //         setLoading(false)
+    //     }
+    // }
 
     if (loading) {
         return (
@@ -73,7 +81,6 @@ function ProductDetails() {
                     <p><span className='fs-5 fw-bold'>Size:</span> {product.size}</p>
                 </div>
             </div>
-            <h1>{product.tilte}</h1>
         </div>
     )
 }

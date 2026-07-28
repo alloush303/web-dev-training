@@ -13,7 +13,11 @@ export default function useFetch(link) {
         const fetchData = async (link) => {
             try {
                 const responce = await axios.get(link)
-                setData(responce.data.data)
+                if (responce.data && responce.data.data) {
+                    setData(responce.data.data)
+                } else {
+                    setData(responce.data)
+                }
             } catch (err) {
                 setErorr(err.message)
             } finally {
@@ -23,8 +27,7 @@ export default function useFetch(link) {
 
         fetchData(link)
     }, [link])
-
-    console.log(data)
     return { data, loading, error }
 }
+
 
