@@ -15,11 +15,6 @@ function ProductCard(props) {
         navigate(`/dashboard/products/${props.id}`)
     }
 
-    console.log(curenccy === 'syrianBounds'
-        ? `${CurenccyConverter(+props.price)} L.S`
-        : `${props.price} $`
-    )
-
 
     return (
         <div >

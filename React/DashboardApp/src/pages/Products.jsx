@@ -10,21 +10,15 @@ import { CurenccyProvider } from '../context/CurenccyContext'
 function Products() {
     let { theme } = useContext(ThemeContext)
 
-    let { data, loading, error } = useFetch("https://fakestoreapi.noksha.dev/api/products")
-    console.log(data)
-    let [products, setProducts] = useState([])
+    let { data: products, loading, error } = useFetch("https://fakestoreapi.noksha.dev/api/products")
     let [filteredProduct, setFilteredProduct] = useState([])
     let [category, setCategory] = useState([])
     let [selectCategory, setSelectCategory] = useState('All')
-    // let [loading, setLoading] = useState(false)
-    // let [error, setError] = useState(null)
 
     useEffect(() => {
-        // loadProducts()
-        if (data) {
-            setProducts(data)
-            setFilteredProduct(data)
-            let allCategory = data.map(item => item.category).reduce((cat, currentCat) => {
+        if (products) {
+            setFilteredProduct(products)
+            let allCategory = products.map(item => item.category).reduce((cat, currentCat) => {
                 if (!cat.includes(currentCat)) {
                     cat.push(currentCat)
                 }
@@ -32,31 +26,9 @@ function Products() {
             }, ['All'])
             setCategory(allCategory)
         }
-    }, [data])
+    }, [products])
 
-    // let loadProducts = async () => {
-    //     setLoading(true)
-    //     setError(null)
-
-    //     try {
-    //         let data = await getProducts()
-    //         setProducts(data)
-    //         setFilteredProduct(data)
-    //         let allCategory = data.map(item => item.category).reduce((cat, currentCat) => {
-    //             if (!cat.includes(currentCat)) {
-    //                 cat.push(currentCat)
-    //             }
-    //             return cat
-    //         }, ['All'])
-    //         setCategory(allCategory)
-    //         setLoading(false)
-    //     }
-    //     catch (err) {
-    //         setError('Faild to load Products')
-    //         setLoading(false)
-    //     }
-    // }
-
+    console.log(category)
     const handleFilter = (category) => {
         setSelectCategory(category)
         if (category === 'All')
@@ -66,7 +38,6 @@ function Products() {
             setFilteredProduct(filterd)
         }
     }
-    console.log(category)
 
     if (loading) {
         return (

@@ -1,7 +1,32 @@
+const fs = require('fs')
+const path = require('path')
+
 const dataHandler = requier('../modules/dataHandler.js')
 
 
+function serveHTML(fileName, statusCode, res) {
+    const filePath = path.join(__dirname, '../puplic', fileName)
+    fs.readFile(filePath, (err, data) => {
+        if (err) {
+            res.statusCode = 500
+            res.setHeader('Content-Type', 'text/plain')
+            return res.end('تعذر تحميل الصفحة...')
+        }
+        res.statusCode = statusCode
+        res.setHeader('Content-Type', 'text/plain')
+        res.end(data)
+    })
+}
+
 const router = (req, res) => {
+    if (req.url === '/home' && req.method === 'GET') {
+        return serveHTML('index.html', 200, res)
+    }
+
+    if (req.url === '/about' && req.method === 'GET') {
+        return serveHTML('about.html', 200, res)
+    }
+
     res.setHeader('Content-Type', 'applicstion/json')
 
     if (req.url === '/api/users' && req.method === 'GET') {
@@ -43,10 +68,9 @@ const router = (req, res) => {
                 return res.end(JSON.stringify({ error: 'صيغة JSON تالفة' }))
             }
         })
-    } else {
-        res.statusCode = 404
-        return res.end(JSON.stringify({ eroor: 'المسار غير موجود ' }))
     }
+
+    return serveHTML('404.html', 404, res)
 }
 
 modulr.export = router
