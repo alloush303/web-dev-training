@@ -1,40 +1,40 @@
 const fs = require('fs')
 const path = require('path')
 
-const dataHandler = requier('../modules/dataHandler.js')
+const dataHandler = require('../modules/dataHandler.js')
 
 
 function serveHTML(fileName, statusCode, res) {
-    const filePath = path.join(__dirname, '../puplic', fileName)
+    const filePath = path.join(__dirname, '../public', fileName)
     fs.readFile(filePath, (err, data) => {
         if (err) {
             res.statusCode = 500
-            res.setHeader('Content-Type', 'text/plain')
+            res.setHeader('Content-Type', 'text/html;  charset=utf-8')
             return res.end('تعذر تحميل الصفحة...')
         }
         res.statusCode = statusCode
-        res.setHeader('Content-Type', 'text/plain')
-        res.end(data)
+        res.setHeader('Content-Type', 'text/html;  charset=utf-8')
+        return res.end(data)
     })
 }
 
 const router = (req, res) => {
+
+
     if (req.url === '/home' && req.method === 'GET') {
         return serveHTML('index.html', 200, res)
     }
-
-    if (req.url === '/about' && req.method === 'GET') {
+    else if (req.url === '/about' && req.method === 'GET') {
         return serveHTML('about.html', 200, res)
     }
-
-    res.setHeader('Content-Type', 'applicstion/json')
-
-    if (req.url === '/api/users' && req.method === 'GET') {
+    else if (req.url === '/api/users' && req.method === 'GET') {
+        res.setHeader('Content-Type', 'application/json;  charset=utf-8')
         const users = dataHandler.getUsers();
         res.statusCode = 200
         return res.end(JSON.stringify(users))
 
     } else if (req.url.startsWith('/api/user?id=') && req.method === 'GET') {
+        res.setHeader('Content-Type', 'application/json;  charset=utf-8')
         const urlParams = new URL(req.url, `http://${req.headers.host}`)
         const userId = urlParams.searchParams.get('id')
         const user = dataHandler.getUserById(userId)
@@ -68,9 +68,12 @@ const router = (req, res) => {
                 return res.end(JSON.stringify({ error: 'صيغة JSON تالفة' }))
             }
         })
+        return;
+    }
+    else {
+        return serveHTML('404.html', 404, res)
     }
 
-    return serveHTML('404.html', 404, res)
 }
 
-modulr.export = router
+module.exports = router

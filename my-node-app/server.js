@@ -9,7 +9,7 @@ const env = process.env.NODE_ENV
 
 const server = http.createServer((req, res) => {
     router(req, res)
-    res.end(`server is running in port ${PORT}`)
+    // res.end(`server is running in port ${PORT}`)
 })
 
 server.listen(PORT, () => {
