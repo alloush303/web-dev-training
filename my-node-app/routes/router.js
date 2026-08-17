@@ -33,10 +33,18 @@ const router = (req, res) => {
         res.statusCode = 200
         return res.end(JSON.stringify(users))
 
-    } else if (req.url.startsWith('/api/user?id=') && req.method === 'GET') {
+    } else if (req.url.startsWith('/api/users/') && req.method === 'GET') {
         res.setHeader('Content-Type', 'application/json;  charset=utf-8')
-        const urlParams = new URL(req.url, `http://${req.headers.host}`)
-        const userId = urlParams.searchParams.get('id')
+
+        // جلب البيانات المستخدم ب صيغة علامة الاستفهام /api/user?id=1
+        // const urlParams = new URL(req.url, `http://${req.headers.host}`)
+        // const userId = urlParams.searchParams.get('id')
+
+
+        //جلب البيانات المستخدم ب الصيغة  /api/users/1
+        const urlParts = req.url.split('/')
+        const userId = urlParts[urlParts.length - 1]
+
         const user = dataHandler.getUserById(userId)
 
         if (user) {
