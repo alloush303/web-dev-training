@@ -3,6 +3,15 @@ const path = require('path')
 
 const filePath = path.join(__dirname, '../data/users.json')
 
+function ensureFileExists() {
+    if (!fs.existsSync(path.join(__dirname, '../data'))) {
+        fs.mkdirSync(path.join(__dirname, '../data'), { recursive: true });
+    }
+    if (!fs.existsSync(filePath)) {
+        fs.writeFileSync(filePath, JSON.stringify([], null, 2), 'utf-8');
+    }
+}
+
 const dataHandler = {
 
     getUsers: () => {
@@ -58,4 +67,4 @@ const dataHandler = {
     }
 }
 
-module.export = dataHandler
+module.exports = dataHandler
